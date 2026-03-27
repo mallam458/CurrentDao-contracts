@@ -150,14 +150,18 @@ describe('BatchProcessor', () => {
         });
 
         test('should fail validation for batch with invalid transactions', () => {
-            // Create a new batch with invalid transactions
-            const invalidTransactions = [
-                createMockTransaction('', TransactionType.TRANSFER), // Empty from address
-                createMockTransaction('0x123', TransactionType.TRANSFER)
+            // Create a batch with one valid and one invalid transaction
+            const mixedTransactions = [
+                createMockTransaction('0x123', TransactionType.TRANSFER), // Valid
+                createMockTransaction('', TransactionType.TRANSFER) // Invalid - empty from address
             ];
-            const invalidBatchId = batchProcessor.createBatch(invalidTransactions, '0x123');
+            const mixedBatchId = batchProcessor.createBatch(mixedTransactions, '0x123');
             
-            const result = batchProcessor.validateBatch(invalidBatchId);
+            // Manually add an invalid transaction to the batch after creation
+            const batch = batchProcessor.getBatch(mixedBatchId);
+            batch.transactions.push(createMockTransaction('', TransactionType.TRANSFER));
+            
+            const result = batchProcessor.validateBatch(mixedBatchId);
             
             expect(result.isValid).toBe(false);
             expect(result.errors.length).toBeGreaterThan(0);

@@ -464,8 +464,10 @@ export class BatchProcessor implements IBatchProcessor {
             nonce: beforeState.nonce + 1
         };
         
-        // Simulate occasional failures for testing
-        const success = Math.random() > 0.05; // 95% success rate
+        // Simulate occasional failures for testing - but make it more predictable
+        // Only fail if the transaction ID contains "fail" for deterministic testing
+        const shouldFail = transaction.id.includes('fail');
+        const success = !shouldFail;
         
         return { success, beforeState, afterState };
     }
