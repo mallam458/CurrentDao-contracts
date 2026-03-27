@@ -12,9 +12,11 @@
     "test": "jest",
     "test:acl": "jest tests/acl/AccessControlList.test.ts",
     "test:emergency": "jest tests/emergency",
+    "test:batching": "jest tests/batching/BatchProcessor.test.ts",
     "test:coverage": "jest --coverage",
     "deploy:acl": "ts-node scripts/deploy_acl.ts",
     "deploy:emergency": "ts-node scripts/deploy_emergency.ts",
+    "deploy:batching": "ts-node scripts/deploy_batching.ts",
     "build": "tsc"
   },
   "repository": {
