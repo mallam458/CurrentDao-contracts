@@ -1,4 +1,4 @@
-import { EmergencyMigration } from '../contracts/migration/EmergencyMigration.js';
+import { EmergencyMigration } from '../contracts/migration/EmergencyMigration';
 
 /**
  * Deployment script for the Emergency Migration system.

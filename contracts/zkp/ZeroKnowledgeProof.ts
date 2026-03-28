@@ -1,7 +1,7 @@
-import type { IZeroKnowledgeProof, ITradeMetadata, IPublicSignals, IZKProof } from './interfaces/IZeroKnowledgeProof.js';
-import { ProofGenerator } from './proofs/ProofGenerator.js';
-import { ProofVerifier } from './verification/ProofVerifier.js';
-import { PrivacyControls } from './privacy/PrivacyControls.js';
+import type { IZeroKnowledgeProof, ITradeMetadata, IPublicSignals, IZKProof } from './interfaces/IZeroKnowledgeProof';
+import { ProofGenerator } from './proofs/ProofGenerator';
+import { ProofVerifier } from './verification/ProofVerifier';
+import { PrivacyControls } from './privacy/PrivacyControls';
 import crypto from 'node:crypto';
 
 /**

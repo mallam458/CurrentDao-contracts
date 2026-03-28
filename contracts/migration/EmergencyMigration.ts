@@ -1,9 +1,9 @@
-import { MigrationStatus } from './interfaces/IEmergencyMigration.js';
-import type { IEmergencyMigration, IMigrationAnalytics } from './interfaces/IEmergencyMigration.js';
-import { MigrationLib } from './libraries/MigrationLib.js';
-import { StatePreserver } from './preservation/StatePreserver.js';
-import { RapidMigrator } from './execution/RapidMigrator.js';
-import { MigrationVerifier } from './verification/MigrationVerifier.js';
+import { MigrationStatus } from './interfaces/IEmergencyMigration';
+import type { IEmergencyMigration, IMigrationAnalytics } from './interfaces/IEmergencyMigration';
+import { MigrationLib } from './libraries/MigrationLib';
+import { StatePreserver } from './preservation/StatePreserver';
+import { RapidMigrator } from './execution/RapidMigrator';
+import { MigrationVerifier } from './verification/MigrationVerifier';
 
 /**
  * EmergencyMigration is the main entry point and facade for the migration ecosystem.

@@ -1,6 +1,6 @@
 import { describe, test, expect, beforeEach } from '@jest/globals';
-import { EmergencyMigration } from '../../contracts/migration/EmergencyMigration.js';
-import { MigrationStatus } from '../../contracts/migration/interfaces/IEmergencyMigration.js';
+import { EmergencyMigration } from '../../contracts/migration/EmergencyMigration';
+import { MigrationStatus } from '../../contracts/migration/interfaces/IEmergencyMigration';
 
 describe('EmergencyMigration System', () => {
     let migration: EmergencyMigration;

@@ -1,5 +1,5 @@
-import type { IZKProof, IPublicSignals, ITradeMetadata } from '../interfaces/IZeroKnowledgeProof.js';
-import { ZKPLib } from '../libraries/ZKPLib.js';
+import type { IZKProof, IPublicSignals, ITradeMetadata } from '../interfaces/IZeroKnowledgeProof';
+import { ZKPLib } from '../libraries/ZKPLib';
 import crypto from 'node:crypto';
 
 export class ProofGenerator {

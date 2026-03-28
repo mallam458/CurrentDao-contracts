@@ -1,4 +1,4 @@
-import { MigrationLib } from '../libraries/MigrationLib.js';
+import { MigrationLib } from '../libraries/MigrationLib';
 
 /**
  * StatePreserver handles capturing, storing, and restoring the contract state.

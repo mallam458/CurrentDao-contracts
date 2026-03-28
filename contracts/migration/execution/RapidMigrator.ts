@@ -1,5 +1,5 @@
-import { MigrationStatus } from '../interfaces/IEmergencyMigration.js';
-import { StatePreserver } from '../preservation/StatePreserver.js';
+import { MigrationStatus } from '../interfaces/IEmergencyMigration';
+import { StatePreserver } from '../preservation/StatePreserver';
 
 /**
  * RapidMigrator orchestrates the migration execution, ensuring minimal disruption.

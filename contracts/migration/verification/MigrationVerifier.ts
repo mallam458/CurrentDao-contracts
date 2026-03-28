@@ -1,5 +1,5 @@
-import { StatePreserver } from '../preservation/StatePreserver.js';
-import { MigrationLib } from '../libraries/MigrationLib.js';
+import { StatePreserver } from '../preservation/StatePreserver';
+import { MigrationLib } from '../libraries/MigrationLib';
 
 /**
  * MigrationVerifier validates the success of the migration.
